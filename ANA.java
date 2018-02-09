@@ -37,18 +37,21 @@ public class ANA {
 
 	
 	public static void main(String args[]) throws IOException{
-		Scanner sc = new Scanner(System.in);		
+		Scanner sc = new Scanner(System.in); //in the original file this line made a new object that was never closed and caused a memory leak		
 		System.out.println("Enter number: ");
+	
 
 		try {
 			int input = sc.nextInt();
 			ANA obj = new ANA();
 			obj.rev_and_sum(input);
+			sc.close(); //closing the object to prevent memory leakage
 
 		}
 		catch(Exception e) {
 			System.out.println("Please enter numbers only.");
-
+			sc.close(); //closing the object to prevent memory leakage
+			
 		}
 
 	}

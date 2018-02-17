@@ -1,4 +1,4 @@
-//Shelby Luttrell: Lone wolf
+//Shelby Luttrell:
 //DSL Project #2: 4 Function Calculator
 
 #include <QApplication>

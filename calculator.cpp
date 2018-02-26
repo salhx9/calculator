@@ -37,6 +37,10 @@ Calculator::Calculator(QWidget *parent)
     Button *minusButton = createButton(tr("-"), SLOT(additiveOperatorClicked()));
     Button *plusButton = createButton(tr("+"), SLOT(additiveOperatorClicked()));
     Button *equalButton = createButton(tr("="), SLOT(equalClicked()));
+	//Button *sinButton = createButton(tr("sin"), SLOT(sinClicked()));
+	//Button *cosButton = createButton(tr("cos"), SLOT(cosClicked()));
+	//Button *tanButton = createButton(tr("tan"), SLOT(tanClicked()));
+	
 
     //creates a new grid layout for the calculator app
     QGridLayout *mainLayout = new QGridLayout;
@@ -46,6 +50,7 @@ Calculator::Calculator(QWidget *parent)
     mainLayout->addWidget(backspaceButton, 1, 0, 1, 2);
     mainLayout->addWidget(clearButton, 1, 2, 1, 2);
     mainLayout->addWidget(clearAllButton, 1, 4, 1, 2);
+	//need to add a buttons here for sin, cos, tan
 
     for (int i = 1; i < NumDigitButtons; ++i) {
         int row = ((9 - i) / 3) + 2;
@@ -232,3 +237,9 @@ bool Calculator::calculate(double rightOperand, const QString &pendingOperator)
     }
     return true;
 }
+
+//void Calculator::sinClicked();
+
+//void cosClicked();
+
+//void tanClicked();

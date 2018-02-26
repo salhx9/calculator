@@ -24,6 +24,10 @@ private slots:
     void backspaceClicked();
     void clear();
     void clearAll();
+    //gonna need a new trig function here
+	//void sinClicked();
+	//void cosClicked();
+	//void tanClicked();
 
 private:
     Button *createButton(const QString &text, const char *member);
